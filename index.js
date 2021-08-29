@@ -559,7 +559,7 @@ async function starts() {
 	client.on('open', () => {
 		success('2', 'Prontinho conectado')
 	})
-	await client.connect({timeoutMs: 30*1000})
+	await client.connect({timeoutMs: 30*10000})
         fs.writeFileSync('./BarBar.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
 
 	client.on('group-participants-update', async (anu) => {
